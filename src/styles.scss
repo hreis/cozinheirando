@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@include mat-core();
+
+// Primária: #962ADC
+// Accent: #ffcc00
+// Alert: #ff6666
+
+$cdz-accent: mat-palette($mat-yellow, 500);
+$cdz-primary: mat-palette($mat-purple, 500);
+$cdz-theme: mat-light-theme($cdz-primary, $cdz-accent);
+@include angular-material-theme($cdz-theme);
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-family: 'Righteous', cursive;
+}
+
+a {
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+}

@@ -1,0 +1,104 @@
+$duration: .2s;
+$distance: 8px;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+$primary: #962ADC;
+$nav-text: #43413f;
+
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+
+.logo-cdz {
+  height: 50px;
+}
+
+.header-left {
+  display: flex;
+  justify-content: left;
+}
+
+.header-middle {
+  display: flex;
+  justify-content: center;
+}
+
+.header-right {
+  display: flex;
+  justify-content: right;
+}
+
+.blog {
+  box-shadow: none;
+  height: 45px;
+  width: 75px;
+  border-radius: 22px;
+  font-weight: bold;
+}
+
+button.blog {
+  background-color: #962ADC;
+  color: white;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: nav-text;
+  position: relative;
+  text-decoration: none;
+  margin: 0px 14px;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $primary;
+  }
+
+  &:before {
+    opacity: 0;
+    transform: translateY(- $distance);
+    transition: transform 0s $easeOutBack, opacity 0s;
+  }
+
+  &:after {
+    opacity: 0;
+    transform: translateY($distance/2);
+    transition: transform $duration $easeOutBack, opacity $duration;
+  }
+
+  &:hover,
+  &:focus {
+
+    &:before,
+    &:after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &:before {
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+
+    &:after {
+      transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+    }
+  }
+}
+
+button.blog:hover {
+  box-shadow: 1px 5px 16px rgba(0, 0, 0, 0.2);
+}

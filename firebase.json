@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/cozinheirando",
+    "rewrite": [{
+      "source": "**",
+      "destination":"/index.html"
+    }]
+
+  }
+}
