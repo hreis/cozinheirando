@@ -25,7 +25,7 @@ $nav-text: #43413f;
 
 .docs-navbar,
 .docs-navbar-header {
-  background: #3f51b5;
+  background: #7289da;
 }
 
 .header-left {
@@ -63,11 +63,11 @@ a {
   &:after {
     content: '';
     position: absolute;
-    bottom: 2px;
+    bottom: -5px;
     left: 0;
     right: 0;
     height: 2px;
-    background-color: $primary;
+    background-color: black;
   }
 
   &:before {
@@ -110,7 +110,7 @@ a {
   }
 
   .docs-navbar-show-medium {
-    background: #3f51b5;
+    background: #7289da;
     padding: 8px 16px;
   }
 
@@ -132,7 +132,7 @@ a {
   }
 
   .docs-navbar-show-small {
-    background: #3f51b5;
+    background: #7289da;
     padding: 8px 16px;
   }
 
