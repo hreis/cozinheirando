@@ -1,0 +1,173 @@
+.cdzBackground {
+  // background: linear-gradient(0deg, #7196ff -.45%, #2a5ee8 71.18%);
+  position: relative;
+  overflow: hidden;
+}
+
+.grid {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cdzContainer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  z-index: 1;
+}
+
+.row {
+  width: 100%;
+  max-width: 1260px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 20px;
+  padding: 96px 24px;
+}
+
+.cdzSubtitle {
+  margin-top: 24px;
+}
+
+.textMedium {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.h1 {
+  font-weight: 700;
+  line-height: 120%;
+}
+
+.cdzText {
+  color: black;
+}
+
+
+.cdzBody {
+  grid-column: span 4;
+}
+
+.ctaContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.twoButtons {
+  margin-right: 24px;
+}
+
+.downloadButton {
+  margin-top: 24px;
+}
+
+.buttonLarge {
+  border-radius: 28px;
+  font-size: 20px;
+  padding: 16px 32px;
+}
+
+.buttonWhite {
+  background-color: #fff;
+  color: #23272a;
+}
+
+.button {
+  border-radius: 50%;
+  line-height: 24px;
+  cursor: pointer;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+
+.openButton {
+  margin-top: 24px;
+}
+
+.buttonLarge {
+  border-radius: 28px;
+  font-size: 20px;
+  padding: 16px 32px;
+}
+
+.buttonDark {
+  background-color: #23272a;
+  color: #fff;
+}
+
+.button {
+  line-height: 24px;
+  cursor: pointer;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+
+button {
+  appearance: none;
+  background-color: transparent;
+}
+
+.buttonWhite:hover {
+  color: #7289da;
+}
+
+.button:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
+}
+
+.buttonDark:hover {
+  background-color: #36393f;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  .cdzBody {
+    grid-column: 3/span 8;
+    text-align: center;
+  }
+
+  .cdzSubtitle {
+    margin-top: 40px;
+  }
+
+  .ctaContainer {
+
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cdzBody {
+    grid-column: span 5;
+  }
+
+  .cdzBackground {
+    min-height: 526px;
+  }
+
+  .cdzText {
+    margin-bottom: 8px;
+  }
+
+  .h1 {
+    font-size: 56px;
+  }
+
+  .cdzSubtitle {
+    margin-top: 40px;
+  }
+}
